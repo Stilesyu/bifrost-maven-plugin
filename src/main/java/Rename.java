@@ -35,7 +35,7 @@ public class Rename extends AbstractMojo {
     private String regex;
 
 
-    public void execute() throws MojoExecutionException{
+    public void execute() throws MojoExecutionException {
         File file = new File(path);
         if (!file.exists()) {
             throw new MojoExecutionException("Can't find the file,please check the path");
@@ -44,30 +44,31 @@ public class Rename extends AbstractMojo {
         for (File f : files) {
             String oldFileName = f.getName();
             String newFileName;
-            if (null != regex){
-                Pattern pattern  = Pattern.compile(regex);
+            if (null != regex) {
+                Pattern pattern = Pattern.compile(regex);
                 Matcher matcher = pattern.matcher(oldFileName);
-                if (!matcher.matches()){
+                if (!matcher.matches()) {
                     continue;
                 }
-                getLog().info(oldFileName);
             }
             if (isRetainExt) {
-                String[] var = oldFileName.split(".");
-                if (var.length>1){
-                   newFileName = var[0] + suffix + var[1];
-                }else {
-                   newFileName = var[0]+suffix;
+                String[] var = oldFileName.split("\\.");
+                if (var.length > 1) {
+                    newFileName = var[0] + suffix + var[1];
+                } else {
+                    newFileName = var[0] + suffix;
                 }
                 boolean isRename = f.renameTo(new File(path + "/" + newFileName));
                 if (!isRename) {
                     throw new MojoExecutionException("Files rename failed,Please send email to yuxiaochen886@gmail.com or committed exception information to Github issues");
                 }
-                getLog().info(oldFileName+" had been renamed to "+newFileName);
+                getLog().info(oldFileName + " had been renamed to " + newFileName);
             }
         }
 
     }
+
+
 
 
 }
