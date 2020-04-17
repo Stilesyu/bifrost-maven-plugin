@@ -54,7 +54,7 @@ public class Rename extends AbstractMojo {
             if (isRetainExt) {
                 String[] var = oldFileName.split("\\.");
                 if (var.length > 1) {
-                    newFileName = var[0] + suffix + var[1];
+                    newFileName = var[0] + suffix +"."+var[1];
                 } else {
                     newFileName = var[0] + suffix;
                 }
