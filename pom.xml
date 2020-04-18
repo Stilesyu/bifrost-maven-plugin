@@ -41,8 +41,8 @@
                 <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
-                <gpg.executable>gpg.exe</gpg.executable>
-                <gpg.passphrase>happy2010</gpg.passphrase>
+                <gpg.executable>gpg</gpg.executable>
+                <gpg.passphrase>yuxiaochen</gpg.passphrase>
             </properties>
         </profile>
     </profiles>
@@ -64,52 +64,79 @@
     </dependencies>
 
     <build>
-       <pluginManagement>
-           <plugins>
-               <plugin>
-                   <artifactId>maven-deploy-plugin</artifactId>
-                   <version>2.8.2</version>
-                   <executions>
-                       <execution>
-                           <id>default-deploy</id>
-                           <phase>deploy</phase>
-                           <goals>
-                               <goal>deploy</goal>
-                           </goals>
-                       </execution>
-                   </executions>
-               </plugin>
-               <plugin>
-                   <groupId>org.apache.maven.plugins</groupId>
-                   <artifactId>maven-release-plugin</artifactId>
-                   <version>2.5.3</version>
-                   <configuration>
-                       <localCheckout>true</localCheckout>
-                       <pushChanges>false</pushChanges>
-                       <mavenExecutorId>forked-path</mavenExecutorId>
-                       <arguments>-Dgpg.passphrase=${gpg.passphrase}</arguments>
-                   </configuration>
-                   <dependencies>
-                       <dependency>
-                           <groupId>org.apache.maven.scm</groupId>
-                           <artifactId>maven-scm-provider-gitexe</artifactId>
-                           <version>1.9.5</version>
-                       </dependency>
-                   </dependencies>
-               </plugin>
-               <plugin>
-                   <groupId>org.sonatype.plugins</groupId>
-                   <artifactId>nexus-staging-maven-plugin</artifactId>
-                   <version>1.6.7</version>
-                   <extensions>true</extensions>
-                   <configuration>
-                       <serverId>ossrh</serverId>
-                       <nexusUrl>https://oss.sonatype.org/</nexusUrl>
-                       <autoReleaseAfterClose>true</autoReleaseAfterClose>
-                   </configuration>
-               </plugin>
-           </plugins>
-       </pluginManagement>
+        <pluginManagement>
+            <plugins>
+                <!--Compiler-->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.1</version>
+                    <configuration>
+                        <source>1.6</source>
+                        <target>1.6</target>
+                    </configuration>
+                </plugin>
+                <!-- Source -->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-source-plugin</artifactId>
+                    <version>2.2.1</version>
+                    <executions>
+                        <execution>
+                            <phase>package</phase>
+                            <goals>
+                                <goal>jar-no-fork</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+                <!-- Javadoc -->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-javadoc-plugin</artifactId>
+                    <version>2.9.1</version>
+                    <configuration>
+                        <additionalparam>-Xdoclint:none</additionalparam><!-- 添加这个压制JavaDoc检查 -->
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <phase>package</phase>
+                            <goals>
+                                <goal>jar</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+                <!-- GPG mvn clean deploy -P release -Dgpg.passphrase=YourPassphase -->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-gpg-plugin</artifactId>
+                    <version>1.5</version>
+                    <executions>
+                        <execution>
+                            <id>sign-artifacts</id>
+                            <phase>verify</phase>
+                            <goals>
+                                <goal>sign</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-deploy-plugin</artifactId>
+                    <version>2.8.2</version>
+                    <executions>
+                        <execution>
+                            <id>default-deploy</id>
+                            <phase>deploy</phase>
+                            <goals>
+                                <goal>deploy</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+            </plugins>
+        </pluginManagement>
     </build>
 
     <distributionManagement>
@@ -124,8 +151,6 @@
             <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
         </repository>
     </distributionManagement>
-
-
 
 
 </project>
