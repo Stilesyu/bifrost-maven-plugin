@@ -1,0 +1,95 @@
+// ------------------------------------------------------------------
+// Transitive dependencies of this project determined from the
+// maven pom organized by organization.
+// ------------------------------------------------------------------
+
+Maven Source Plugin
+
+
+From: 'an unknown organization'
+  - CLI  commons-cli:commons-cli:jar:1.0
+
+  - Doxia Sink API (http://maven.apache.org/doxia/doxia-sink-api) org.apache.maven.doxia:doxia-sink-api:jar:1.0-alpha-7
+
+
+From: 'Apache Software Foundation' (http://www.apache.org/)
+  - Maven Core (http://maven.apache.org/maven-core) org.apache.maven:maven-core:jar:2.0.6
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Maven Error Diagnostics (http://maven.apache.org/maven-error-diagnostics) org.apache.maven:maven-error-diagnostics:jar:2.0.6
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Maven Monitor (http://maven.apache.org/maven-monitor) org.apache.maven:maven-monitor:jar:2.0.6
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Maven Plugin Descriptor Model (http://maven.apache.org/maven-plugin-descriptor) org.apache.maven:maven-plugin-descriptor:jar:2.0.6
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Maven Plugin Parameter Documenter API (http://maven.apache.org/maven-plugin-parameter-documenter) org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.6
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Maven Reporting API (http://maven.apache.org/maven-reporting/maven-reporting-api) org.apache.maven.reporting:maven-reporting-api:jar:2.0.6
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Maven Wagon File Provider (http://maven.apache.org/wagon/wagon-providers/wagon-file) org.apache.maven.wagon:wagon-file:jar:1.0-beta-2
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Maven Wagon Lightweight HTTP Provider (http://maven.apache.org/wagon/wagon-providers/wagon-http-lightweight) org.apache.maven.wagon:wagon-http-lightweight:jar:1.0-beta-2
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Maven Wagon HTTP Shared Library (http://maven.apache.org/wagon/wagon-providers/wagon-http-shared) org.apache.maven.wagon:wagon-http-shared:jar:1.0-beta-2
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Maven Wagon API (http://maven.apache.org/wagon/wagon-provider-api) org.apache.maven.wagon:wagon-provider-api:jar:1.0-beta-2
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Maven Wagon SSH Provider (http://maven.apache.org/wagon/wagon-providers/wagon-ssh) org.apache.maven.wagon:wagon-ssh:jar:1.0-beta-2
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Maven Wagon SSH Common Library (http://maven.apache.org/wagon/wagon-providers/wagon-ssh-common) org.apache.maven.wagon:wagon-ssh-common:jar:1.0-beta-2
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Maven Wagon SSH External Provider (http://maven.apache.org/wagon/wagon-providers/wagon-ssh-external) org.apache.maven.wagon:wagon-ssh-external:jar:1.0-beta-2
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - XML Commons External Components XML APIs (http://xml.apache.org/commons/#external) xml-apis:xml-apis:jar:1.0.b2
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: 'Codehaus' (http://www.codehaus.org/)
+  - Plexus Archiver Component (http://plexus.codehaus.org/plexus-components/plexus-archiver) org.codehaus.plexus:plexus-archiver:jar:2.2
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Default Plexus Container  org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1
+
+  - Plexus Default Interactivity Handler  org.codehaus.plexus:plexus-interactivity-api:jar:1.0-alpha-4
+
+  - Plexus Interpolation API (http://plexus.codehaus.org/plexus-interpolation/) org.codehaus.plexus:plexus-interpolation:jar:1.15
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Plexus IO Components (http://plexus.codehaus.org/plexus-components/plexus-io) org.codehaus.plexus:plexus-io:jar:2.0.4
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Plexus Common Utilities (http://plexus.codehaus.org/plexus-utils) org.codehaus.plexus:plexus-utils:jar:3.0.8
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: 'jcraft' (http://www.jcraft.com/jsch)
+  - JSch (http://www.jcraft.com/jsch/) com.jcraft:jsch:jar:0.1.27
+    License: BSD  (http://www.jcraft.com/jsch/LICENSE.txt)
+
+From: 'JTidy' (http://jtidy.sf.net)
+  - JTidy (http://jtidy.sourceforge.net) jtidy:jtidy:jar:4aug2000r7-dev
+    License: Java HTML Tidy License  (http://svn.sourceforge.net/viewvc/*checkout*/jtidy/trunk/jtidy/LICENSE.txt?revision=95)
+
+From: 'The Apache Software Foundation' (http://www.apache.org/)
+  - Maven Archiver (http://maven.apache.org/shared/maven-archiver/) org.apache.maven:maven-archiver:jar:2.5
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Maven Artifact (http://maven.apache.org/maven-artifact) org.apache.maven:maven-artifact:jar:2.0.9
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Maven Artifact Manager (http://maven.apache.org/maven-artifact-manager) org.apache.maven:maven-artifact-manager:jar:2.0.9
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Maven Model (http://maven.apache.org/maven-model) org.apache.maven:maven-model:jar:2.0.9
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Maven Plugin API (http://maven.apache.org/maven-plugin-api) org.apache.maven:maven-plugin-api:jar:2.0.9
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Maven Plugin Registry Model (http://maven.apache.org/maven-plugin-registry) org.apache.maven:maven-plugin-registry:jar:2.0.9
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Maven Profile Model (http://maven.apache.org/maven-profile) org.apache.maven:maven-profile:jar:2.0.9
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Maven Project Builder (http://maven.apache.org/maven-project) org.apache.maven:maven-project:jar:2.0.9
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Maven Repository Metadata Model (http://maven.apache.org/maven-repository-metadata) org.apache.maven:maven-repository-metadata:jar:2.0.9
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Maven Local Settings Model (http://maven.apache.org/maven-settings) org.apache.maven:maven-settings:jar:2.0.9
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: 'The Codehaus' (http://codehaus.org/)
+  - classworlds (http://classworlds.codehaus.org/) classworlds:classworlds:jar:1.1-alpha-2
+
+
+
+
+
