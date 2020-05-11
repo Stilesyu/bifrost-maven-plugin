@@ -35,12 +35,14 @@ public class Rename extends AbstractMojo {
     private String regex;
 
 
+    @Override
     public void execute() throws MojoExecutionException {
         File file = new File(path);
         if (!file.exists()) {
-            throw new MojoExecutionException("Can't find the file,please check the path");
+            throw new MojoExecutionException("Can't find any files,please check the path");
         }
         File[] files = file.listFiles();
+        assert files != null;
         for (File f : files) {
             String oldFileName = f.getName();
             String newFileName;
@@ -54,7 +56,7 @@ public class Rename extends AbstractMojo {
             if (isRetainExt) {
                 String[] var = oldFileName.split("\\.");
                 if (var.length > 1) {
-                    newFileName = var[0] + suffix +"."+var[1];
+                    newFileName = var[0] + suffix + "." + var[1];
                 } else {
                     newFileName = var[0] + suffix;
                 }
@@ -67,9 +69,6 @@ public class Rename extends AbstractMojo {
         }
 
     }
-
-
-
 
 
 }
